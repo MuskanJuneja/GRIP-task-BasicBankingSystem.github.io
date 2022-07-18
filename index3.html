@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Transfer</title>
+    <style>
+        .p1 {
+            font-family: cursive;
+        }
+
+        .cont {
+            background: rgba(255, 255, 255, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-blue-300" onload="imp()">
+    <nav class="flex justify-between items-center bg-violet-900">
+        <div class="flex items-center">
+            <img src="logo.png" class="w-16 h-10" alt="logo">
+            <p class="mx-4 font-bold p1 text-lg text-white">Mera Bank</p>
+        </div>
+        <div class="flex items-center">
+            <p class="mx-6 font-semibold text-lg text-white hover:cursor-pointer hover:underline">Home</p>
+            <p class="mx-6 font-semibold text-lg text-white hover:cursor-pointer hover:underline">Info</p>
+            <p class="mx-6 font-semibold text-lg text-white hover:cursor-pointer hover:underline">About Us</p>
+            <p class="mx-6 font-semibold text-lg text-white hover:cursor-pointer hover:underline">Contact</p>
+        </div>
+    </nav>
+    <div class="flex justify-around items-start">
+    <div class="cont flex flex-col justify-center items-center my-20 w-60">
+        <label class="my-2 text-lg">Transfer To:</label>
+        <input type="text" class="my-2 text-lg" id="to">
+        <label class="my-2 text-lg">From:</label>
+        <input type="text" class="my-2 text-lg" id="from">
+        <label class="my-2 text-lg">Amount:</label>
+        <input type="text" class="my-2 text-lg" id="amt">
+        <input type="button" class=" cursor-pointer my-4 text-lg rounded bg-pink-700 text-white w-28 hover:bg-pink-900"
+            onclick="Transfer()" value="Submit">
+    </div>
+    <div class="flex justify-center items-center flex-col">
+        <p class="text-4xl font-bold font-mono underline mt-10">Transaction History</p>
+        <div class="my-4" id="Write">
+
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
